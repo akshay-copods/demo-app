@@ -5,7 +5,14 @@ on:
     branches: ["main"]
   pull_request:
     types: [opened, synchronize]
- 
+
+permissions:
+  pull-requests: write
+  issues: write
+  repository-projects: write
+  actions: write
+  contents: write
+  
 jobs:
   build:
       name: Build and Test
@@ -35,10 +42,9 @@ jobs:
         - name: Build
           run: npm run build
         - name: Ship
-          run: npm auto shipit
+          run: npm run shipit
           env:
-      # To use Remote Caching, uncomment the next lines and follow the steps below.
-            NPM_TOKEN: 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
+            NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             GH_TOKEN: ${{ secrets.GH_TOKEN }}
  
        
