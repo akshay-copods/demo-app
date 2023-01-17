@@ -11,10 +11,7 @@ jobs:
       name: Build and Test
       timeout-minutes: 15
       runs-on: ubuntu-latest
-      env:
-      # To use Remote Caching, uncomment the next lines and follow the steps below.
-        NPM_TOKEN: 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
-        GH_TOKEN: ${{ secrets.GH_TOKEN }} 
+       
       #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       #  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
       #  TURBO_REMOTE_ONLY: true
@@ -39,5 +36,9 @@ jobs:
           run: npm run build
         - name: Ship
           run: auto shipit
+          env:
+      # To use Remote Caching, uncomment the next lines and follow the steps below.
+            NPM_TOKEN: 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
+            GH_TOKEN: ${{ secrets.GH_TOKEN }}
  
        
