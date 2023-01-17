@@ -35,7 +35,7 @@ jobs:
         - name: Build
           run: npm run build
         - name: Ship
-          run: npm auto shipit
+          run: npx auto shipit
           env:
       # To use Remote Caching, uncomment the next lines and follow the steps below.
             NPM_TOKEN: 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
