@@ -12,7 +12,7 @@ permissions:
   repository-projects: write
   actions: write
   contents: write
-  
+
 jobs:
   build:
       name: Build and Test
@@ -42,7 +42,7 @@ jobs:
         - name: Build
           run: npm run build
         - name: Ship
-          run: npm run shipit
+          run: npx auto shipit
           env:
             NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
             GH_TOKEN: ${{ secrets.GH_TOKEN }}
