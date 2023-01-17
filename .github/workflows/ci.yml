@@ -12,8 +12,8 @@ jobs:
       timeout-minutes: 15
       runs-on: ubuntu-latest
       # To use Remote Caching, uncomment the next lines and follow the steps below.
-      NPM_TOKEN: ${{secrets.NPM_TOKEN}}
-      GH_TOKEN: ${{secrets.GH_TOKEN}}
+      NPM_TOKEN: ${{ secrets.NPM_TOKEN }}
+      GH_TOKEN: ${{ secrets.GH_TOKEN }} 
       #  TURBO_TOKEN: ${{ secrets.TURBO_TOKEN }}
       #  TURBO_TEAM: ${{ secrets.TURBO_TEAM }}
       #  TURBO_REMOTE_ONLY: true
